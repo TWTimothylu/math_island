@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>因數群島</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/shop.css?v=5">
+</head>
+<body>
+  <canvas id="world"></canvas>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-card" id="hudPlayer">
+      <div class="hud-name" id="hudName">玩家</div>
+      <div class="hud-stats">
+        <span class="pill coin">🪙 <b id="hudCoins">0</b></span>
+        <span class="pill star">⭐ <b id="hudStars">0</b></span>
+      </div>
+    </div>
+    <div class="hud-buttons">
+      <button class="icon-btn" id="btnMap" title="任務地圖">🗺️<span>地圖</span></button>
+      <button class="icon-btn" id="btnWardrobe" title="衣櫥">👕<span>衣櫥</span></button>
+      <button class="icon-btn" id="btnSound" title="音效">🔊<span>音效</span></button>
+      <button class="icon-btn" id="btnSettings" title="設定">⚙️<span>設定</span></button>
+    </div>
+    <div id="placeBanner"></div>
+    <div id="prompt" class="hidden"></div>
+    <div class="cam-buttons">
+      <button class="round-btn" id="camL" title="向左轉">⟲</button>
+      <button class="round-btn" id="camIn" title="拉近">＋</button>
+      <button class="round-btn" id="camOut" title="拉遠">－</button>
+      <button class="round-btn" id="camR" title="向右轉">⟳</button>
+    </div>
+    <div class="help-tip" id="helpTip">點地面移動・WASD／方向鍵走路・靠近設施按 <b>E</b> 或點設施進入</div>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot"></div>
+
+  <div id="loading"><div class="load-inner"><div class="load-hex"></div><div>群島生成中…</div></div></div>
+
+  <script src="js/lib/three.min.js"></script>
+  <script src="js/util.js?v=5"></script>
+  <script src="js/data.js?v=5"></script>
+  <script src="js/avatar.js?v=5"></script>
+  <script src="js/studio.js?v=5"></script>
+  <script src="js/world.js?v=5"></script>
+  <script src="js/framework.js?v=5"></script>
+  <script src="js/games-1.js?v=5"></script>
+  <script src="js/games-2.js?v=5"></script>
+  <script src="js/games-3.js?v=5"></script>
+  <script src="js/main.js?v=5"></script>
+</body>
+</html>
