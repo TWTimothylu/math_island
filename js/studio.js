@@ -16,7 +16,8 @@ function makePreview(cfg, theme = 'meadow') {
   const scene = new THREE.Scene();
   const cam = new THREE.PerspectiveCamera(32, 1, .1, 50);
   scene.add(new THREE.HemisphereLight(0xffffff, 0xb9d9a0, .75));
-  const dl = new THREE.DirectionalLight(0xffffff, .55); dl.position.set(3, 6, 4); dl.castShadow = true; scene.add(dl);
+  const dl = new THREE.DirectionalLight(0xffffff, .55); dl.position.set(3, 6, 4); dl.castShadow = true;
+  dl.shadow.mapSize.set(1024, 1024); dl.shadow.bias = -.0006; dl.shadow.normalBias = .02; scene.add(dl);
   const plat = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.4, .3, 6), MF(TH.top));
   plat.position.y = -.15; plat.receiveShadow = true; scene.add(plat);
   const plat2 = new THREE.Mesh(new THREE.CylinderGeometry(1.4, 1.2, .4, 6), MF(TH.base)); plat2.position.y = -.5; scene.add(plat2);
